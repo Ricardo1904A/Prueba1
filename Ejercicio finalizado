@@ -1,0 +1,29 @@
+// Diseñe un programa que reciba como dato un número entero y a partir de este genere un número de un dígito (entre 0 y 9) sumando los dígitos tantas veces como sea necesario.
+#include<stdio.h>//ponemos la biblioteca stdio.h la cual es la libreria estandar de entrada y salida
+int numero(int num)
+{
+printf("Ingrese un número entero positivo: ");
+    scanf("%d", &num);
+    return num;
+}
+int suma (int n,int sum)
+{
+    int num,sum = 0;
+    printf("Ingrese un numero: ");
+    scanf("%d", &num);
+    for (int i = 1; i <= num; i++) { // Realizamos la suma desde 1 hasta el numero que se ingreso en la funcion anterior
+        sum += i;// utilizando la variable sum, sumamos todas los digitos ingresados por teclado anteriormente 
+    }
+    return sum;
+}
+int main ()
+{
+    int numero,suma = 0;
+    printf("Ingrese un numero: ");
+    scanf("%d", &numero);
+    for (int i = 1; i <= numero; i++) { // Realizamos la suma desde 1 hasta el numero que se ingreso en la funcion anterior
+        suma += i;// utilizando la variable sum, sumamos todas los digitos ingresados por teclado anteriormente 
+    }
+    printf("La suma desde es %d\n", numero, suma);// Hacemos que se visualize el resultado
+    return 0;
+}
